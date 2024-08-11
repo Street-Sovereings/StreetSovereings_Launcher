@@ -24,3 +24,8 @@ func (a *App) RunExecutable(path string) error {
 	cmd := exec.Command(path)
 	return cmd.Start()
 }
+
+func (a *App) OpenNotepad(path string) error {
+	cmd := exec.Command("notepad" + path)
+	return cmd.Start()
+}
